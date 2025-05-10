@@ -212,5 +212,12 @@ footer {
   padding: 2em;
   background-color: var(--main-black);
   color: var(--main-white);
+  gap: 2em;
+  /* font-size: 1.2rem; */
   /* font-family: serif; */
+}
+
+.social-media {
+  display: flex;
+  gap: 2.5em;
 }
