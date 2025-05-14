@@ -9,6 +9,10 @@
   --main-white: #F9F6F1;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Cormorant Garamond", serif;
   color: var(--main-black);
@@ -22,11 +26,11 @@ img {
   border-radius: 0.5em;
   object-fit: cover;
   object-position: center;
+  display: block;
 }
 
 h1 {
   text-transform: capitalize;
-  /* font-size: 8rem; */
   font-size: 4rem;
   line-height: 1;
 }
@@ -47,42 +51,50 @@ section {
 main {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 10em;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Flexes */
+
+.hero-text, .about-section, .about-text, .poem, .contact-section, form {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-section, footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Hero Section */
 
 .hero-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   min-height: 100vh;
   gap: 7em;
 }
 
 .hero-text {
-  display: flex;
-  flex-direction: column;
-  /* text-align: center; */
-  /* gap: 2.5em; */
   gap: 1.5em;
   max-width: 578px;
 }
 
 .tagline {
-  /* font-size: 2.5rem; */
   font-size: 1.6rem;
   line-height: 1.3;
 }
 .buttons {
   display: flex;
-  /* justify-content: space-between; */
   gap: 1em;
   margin-top: 0.3em;
 }
 
 .buttons > a {
-  /* padding: 0.7em 1.6em; */
   padding: 0.6em 1.2em;
   font-size: 1rem;
   text-transform: uppercase;
@@ -118,9 +130,8 @@ main {
 /* About Section */
 
 .about-section {
-  display: flex;
-  flex-direction: column;
   gap: 3em;
+  max-width: 578px;
 }
 
 h2 {
@@ -128,8 +139,6 @@ h2 {
 }
 
 .about-text {
-  display: flex;
-  flex-direction: column;
   gap: 1.5em;
 }
 
@@ -149,8 +158,6 @@ h2 {
   background-size: cover;
   background-position: top;
   padding: 1em;
-  display: flex;
-  flex-direction: column;
   gap: 1em;
 }
 
@@ -176,9 +183,9 @@ h3 {
 /* Contact Me Section */
 
 .contact-section {
-  display: flex;
-  flex-direction: column;
-  gap: 2em;
+  align-items: center;
+  gap: 3em;
+  width: 100%;
 }
 
 .contact-section > h2 {
@@ -196,18 +203,21 @@ form, input, textarea {
 }
 
 form {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
+  gap: 1.25em;
+  max-width: 578px;
 }
 
-input, textarea {
+input, textarea, .form-btn {
   padding: 0.5em;
   border: none;
   font-size: 1rem;
   border-radius: 0.15em;
   background-color: rgb(255, 249, 236);
 
+}
+
+.form-btn {
+  padding: 0.8em 0.5em;
 }
 
 ::placeholder {
@@ -220,16 +230,11 @@ input, textarea {
 
 footer {
   margin-top: 10em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
   padding: 2em;
   background-color: var(--main-black);
   color: var(--main-white);
   gap: 2em;
-  /* font-size: 1.2rem; */
-  /* font-family: serif; */
 }
 
 .social-media {
@@ -239,9 +244,10 @@ footer {
 
 /* Utility */
 
-.about-text, .about-img, .poem, .contact-heading, form {
-  transform: translateY(100);
+.about-text, .about-img, .poem, .contact-heading, form, .in-text-hero-img-container, .hero-img-container {
+  transform: translateY(100px);
   opacity: 0;
+  overflow: hidden;
 }
 
 .poem-text .char {
@@ -252,4 +258,250 @@ footer {
 .poem-text .word {
   display: inline-block;
   white-space: nowrap;
+}
+
+.hero-link, h1, .tagline {
+  opacity: 0;
+}
+
+.hero-link {
+  transform: translateY(40px);
+}
+
+h1 {
+  transform: translateX(-300px);
+}
+
+.tagline {
+  transform: translateX(300px);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+}
+
+
+@media (min-width: 425px) {
+
+  h1 {
+    font-size: 5.5rem;
+  }
+
+  .hero-text {
+    gap: 3em;
+  }
+
+  .tagline {
+    font-size: 2rem;
+  }
+  .buttons {
+    margin-top: -1em;
+  }
+
+  .buttons > a {
+    padding: 0.8em 1.2em;
+  }
+
+  .about-me-link {
+    min-width: 150px;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  .about-text > p {
+    font-size: 1.4rem;
+  }
+
+}
+
+@media (min-width: 768px) {
+  input, textarea, .form-btn {
+    padding: 0.7em;
+  }
+
+  main {
+    gap: 20em;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-section {
+    gap: 3em;
+  }
+
+  .hero-text {
+    max-width: 500px;
+    gap: 1.5em;
+  }
+
+  h1 {
+    font-size: 5rem;
+  }
+
+  .tagline {
+    font-size: 1.6rem;
+    line-height: 1.3;
+  }
+
+  .buttons {
+    justify-content: flex-start;
+    margin-top: 0;
+  }
+
+  .buttons > a {
+    padding: 0.7em 1.6em;
+  }
+
+  .read-poem-link {
+    flex: unset;
+  }
+
+  .in-text-hero-img-container {
+    display: none;
+  }
+
+  .hero-img-container {
+    width: 35%;
+    height: fit-content;
+    overflow: hidden;
+    display: block;
+  }
+
+
+  .about-section {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 3em;
+    max-width: 100%;
+  }
+
+  h2 {
+    font-size: 4rem;
+  }
+
+  .about-text {
+    gap: 2.5em;
+    max-width: 500px;
+    text-align: center;
+  }
+
+  .about-text > p {
+    font-size: 1.4rem;
+  }
+
+  .about-img {
+    max-width: 35%;
+  }
+
+  .social-media {
+    gap: 3.5em;
+  }
+
+}
+
+
+@media (min-width: 1440px) {
+  .hero-section {
+    gap: 4em;
+  }
+
+  .hero-text {
+    max-width: 700px;
+    gap: 2.5em;
+  }
+
+  h1 {
+    font-size: 8rem;
+  }
+
+  .tagline {
+    font-size: 2.5rem;
+  }
+
+  .buttons > a {
+    padding: 0.7em 3em;
+  }
+
+  .about-section {
+    gap: 4em;
+    max-width: 1264px;
+  }
+
+  .about-text {
+    max-width: 700px;
+  }
+
+  .about-img {
+    max-width: 35%;
+  }
+
+  h3 {
+    font-size: 2.5rem;
+  } 
+
+  .poem > .poem-text {
+    font-size: 1.8rem;
+  }
+
+  .poem {
+    padding: 2em;
+    gap: 2em;
+  }
+
+}
+
+
+@media (min-width: 1600px) {
+  .hero-section {
+    gap: 7em;
+  }
+
+  .hero-text {
+    max-width: 700px;
+    gap: 2.5em;
+  }
+
+  h1 {
+    font-size: 8rem;
+  }
+
+  .tagline {
+    font-size: 2.5rem;
+  }
+
+  .buttons > a {
+    padding: 0.7em 3em;
+  }
+
+  .hero-img-container {
+    width: 550px;
+    height: auto;
+    overflow: hidden;
+  }
+
+  .about-section {
+    gap: 7em;
+    max-width: 1394px;
+  }
+
+  .about-text {
+    line-height: 1.7;
+  }
+
+  .about-text > p {
+    font-size: 1.6rem;
+  }
+
+  .about-img {
+    max-width: 550px;
+  }
+
 }

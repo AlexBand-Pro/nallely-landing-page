@@ -3,22 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nallely Herrera</title>
-    <link rel="stylesheet" href="./index.css" />
-
-    <!-- Cormorant Garamond Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap"
-      rel="stylesheet"
+    <meta
+      name="description"
+      content="Poetry rooted in stillness, wonder, and the human soul by Nallely Herrera. Discover original poems and heartfelt verses."
     />
 
-    <!-- hand written font  -->
+    <meta
+      property="og:title"
+      content="Nallely Herrera | Poetry & Verses That Breathe"
+    />
+    <meta
+      property="og:description"
+      content="Poetry rooted in stillness, wonder, and the human soul."
+    />
+    <meta
+      property="og:image"
+      content="https://yourdomain.com/images/valentines.png"
+    />
+    <meta property="og:url" content="https://yourdomain.com/" />
+    <meta property="og:type" content="website" />
+
+    
+    <title>Nallely Herrera | Poetry & Verses That Breathe</title>
+    <link rel="stylesheet" href="./index.css" />
+    <!-- <link rel="canonical" href="https://yourdomain.com/" /> -->
+
+    <link rel="icon" type="image/png" href="./images/valentines.png" />
+    <link rel="preload" href="./images/quill.jpg" as="image" />
+    <link rel="preload" href="./images/nallely-2.jpeg" as="image" />
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
-      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;700&family=Caveat:wght@400;700&display=swap"
       rel="stylesheet"
     />
 
@@ -46,8 +65,12 @@
             />
           </div>
           <div class="buttons">
-            <a href="#" class="hero-link read-poem-link">read a poem</a>
-            <a href="#" class="hero-link about-me-link">about me</a>
+            <a href="#poetry-section" class="hero-link read-poem-link"
+              >read a poem</a
+            >
+            <a href="#about-section" class="hero-link about-me-link"
+              >about me</a
+            >
           </div>
         </div>
         <div class="hero-img-container">
@@ -58,8 +81,12 @@
         </div>
       </section>
 
-      <section class="about-section">
-        <img class="about-img" src="./images/nallely-2.jpeg" alt="" />
+      <section class="about-section" id="about-section">
+        <img
+          class="about-img"
+          src="./images/nallely-2.jpeg"
+          alt="Nallely Herrera"
+        />
         <div class="about-text">
           <h2>About Me</h2>
           <p>
@@ -75,7 +102,7 @@
         </div>
       </section>
 
-      <section class="poetry-section">
+      <section class="poetry-section" id="poetry-section">
         <div class="poem">
           <h3>Juegos ínfimos</h3>
           <div class="poem-text">
@@ -147,8 +174,11 @@
       <section class="contact-section">
         <h2 class="contact-heading">Contact Me</h2>
         <form>
+          <label for="name" class="sr-only">Name</label>
           <input type="text" name="name" id="name" placeholder="Name" />
+          <label for="email" class="sr-only">Email</label>
           <input type="email" name="email" id="email" placeholder="Email" />
+          <label for="message" class="sr-only">Message</label>
           <textarea
             name="message"
             id="message"
@@ -156,15 +186,22 @@
             cols="40"
             rows="10"
           ></textarea>
+          <button id="form-btn" class="form-btn">Send</button>
         </form>
       </section>
     </main>
     <footer>
       <!-- <p>&copy; Nallely Herrera 2025</p> -->
       <div class="social-media">
-        <a class="social-media-link" href=""><i class="fa-brands fa-2x fa-instagram"></i></a>
-        <a class="social-media-link" href=""><i class="fa-brands fa-2x fa-facebook"></i></a>
-        <a class="social-media-link" href=""><i class="fa-brands fa-2x fa-whatsapp"></i></a>
+        <a class="social-media-link" href=""
+          ><i class="fa-brands fa-2x fa-instagram"></i
+        ></a>
+        <a class="social-media-link" href=""
+          ><i class="fa-brands fa-2x fa-facebook"></i
+        ></a>
+        <a class="social-media-link" href=""
+          ><i class="fa-brands fa-2x fa-whatsapp"></i
+        ></a>
       </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
