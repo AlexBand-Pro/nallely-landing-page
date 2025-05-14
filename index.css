@@ -27,7 +27,7 @@ img {
 h1 {
   text-transform: capitalize;
   /* font-size: 8rem; */
-  font-size: 3.5rem;
+  font-size: 4rem;
   line-height: 1;
 }
 
@@ -63,6 +63,7 @@ main {
 .hero-text {
   display: flex;
   flex-direction: column;
+  /* text-align: center; */
   /* gap: 2.5em; */
   gap: 1.5em;
   max-width: 578px;
@@ -98,6 +99,8 @@ main {
 .read-poem-link {
   background-color: rgb(9, 5, 65);
   color: var(--main-white);
+  flex: 1;
+  text-align: center;
 }
 
 .read-poem-link:hover {
@@ -137,25 +140,37 @@ h2 {
 /* Poetry Section */
 
 .poetry-section {
-  font-family: "Gloria Hallelujah", cursive;
+  font-family: "Caveat", cursive;
 }
 
 .poem {
   background-image: url(./images/page-2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
   padding: 1em;
   display: flex;
   flex-direction: column;
   gap: 1em;
 }
 
-.poem > p {
-  line-height: 1.8;
-  font-size: 1.05rem;
+.poem-text > div {
+  margin-block: -0.8em;
+}
+
+.poem-text > .spacer {
+  margin-block: -2.5em;
+}
+
+.poem > .poem-text {
+  line-height: 1.5;
+  font-size: 1.5rem;
+  white-space: pre-line;
 }
 
 h3 {
   text-align: center;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 }
 
 /* Contact Me Section */
@@ -220,4 +235,21 @@ footer {
 .social-media {
   display: flex;
   gap: 2.5em;
+}
+
+/* Utility */
+
+.about-text, .about-img, .poem, .contact-heading, form {
+  transform: translateY(100);
+  opacity: 0;
+}
+
+.poem-text .char {
+  display: inline-block;
+  white-space: pre;
+}
+
+.poem-text .word {
+  display: inline-block;
+  white-space: nowrap;
 }

@@ -18,7 +18,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap"
       rel="stylesheet"
     />
 
@@ -39,9 +39,15 @@
           <p class="tagline">
             Poetry rooted in stillness, wonder and the human soul.
           </p>
+          <div class="in-text-hero-img-container">
+            <img
+              src="./images/quill.jpg"
+              alt="Quill dipped in ink, held by a someone next to a candle"
+            />
+          </div>
           <div class="buttons">
-            <a href="#" class="read-poem-link">read a poem</a>
-            <a href="#" class="about-me-link">about me</a>
+            <a href="#" class="hero-link read-poem-link">read a poem</a>
+            <a href="#" class="hero-link about-me-link">about me</a>
           </div>
         </div>
         <div class="hero-img-container">
@@ -53,7 +59,7 @@
       </section>
 
       <section class="about-section">
-        <img src="./images/nallely-2.jpeg" alt="" />
+        <img class="about-img" src="./images/nallely-2.jpeg" alt="" />
         <div class="about-text">
           <h2>About Me</h2>
           <p>
@@ -71,25 +77,75 @@
 
       <section class="poetry-section">
         <div class="poem">
-          <h3>My Poem</h3>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate
-            suscipit sed dolorem tempore, blanditiis odio est officia quo
-            numquam. Veritatis debitis expedita in omnis dolor aut veniam
-            nostrum pariatur atque? Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Earum laborum dicta maiores voluptatibus
-            perferendis perspiciatis rem itaque nisi dolor iure placeat, eos
-            animi quod quo quia fugiat. Fuga, impedit sapiente. Lorem ipsum
-            dolor sit amet, consectetur adipisicing elit. Facere ut laudantium
-            provident quam, molestias reiciendis blanditiis tempore sequi quasi
-            praesentium enim ipsam? Ducimus quas at animi exercitationem,
-            impedit aspernatur veniam!
-          </p>
+          <h3>Juegos ínfimos</h3>
+          <div class="poem-text">
+            <div>Con dos jugadores irrisorios,</div>
+            <div>improbables bajo otras circunstancias,</div>
+            <div>
+              jugando al azar sin más material que unos labios, manos y ojos
+              como piezas...
+            </div>
+
+            <div class="spacer"></div>
+
+            <div>no hay victoria que perseguir,</div>
+            <div>en el mejor de los escenarios</div>
+            <div>
+              el juego está condenado al resultado más escabroso que hay para
+              cualquier
+            </div>
+            <div>competidor;</div>
+
+            <div class="spacer"></div>
+
+            <div>el empate.</div>
+
+            <div class="spacer"></div>
+
+            <div>terreno insufrible,</div>
+            <div>irresistible eres para mí,</div>
+            <div>tanto que, aún con mis manos atadas</div>
+            <div>podría descorrer tus miedos</div>
+            <div>y ahogarlos entre mis labios</div>
+
+            <div class="spacer"></div>
+
+            <div>en fin,</div>
+            <div>tantas y tantas maneras de colorear el sol,</div>
+            <div>que teñirlo con otro tacto lo vuelve abstracto</div>
+
+            <div class="spacer"></div>
+
+            <div>odio tu falta de palabras,</div>
+            <div>Y el exceso de las mías en una misma oración,</div>
+            <div>
+              el hambre que percibo en el aire que abandona tus pulmones
+            </div>
+            <div>
+              y la resistencia de los míos al vaivén de mis caderas antes de
+              irme a dormir,
+            </div>
+            <div>aborrezco el tiempo perdido y las excusas para perderlo,</div>
+            <div>detesto tu abstinencia insípida</div>
+            <div>y mi obstinación a la par.</div>
+
+            <div class="spacer"></div>
+
+            <div>quiero perderme,</div>
+
+            <div class="spacer"></div>
+
+            <div>sin mapa.</div>
+
+            <div class="spacer"></div>
+
+            <div>O que porque sí</div>
+          </div>
         </div>
       </section>
 
       <section class="contact-section">
-        <h2>Contact Me</h2>
+        <h2 class="contact-heading">Contact Me</h2>
         <form>
           <input type="text" name="name" id="name" placeholder="Name" />
           <input type="email" name="email" id="email" placeholder="Email" />
@@ -106,11 +162,14 @@
     <footer>
       <!-- <p>&copy; Nallely Herrera 2025</p> -->
       <div class="social-media">
-        <a href=""><i class="fa-brands fa-2x fa-instagram"></i></a>
-        <a href=""><i class="fa-brands fa-2x fa-facebook"></i></a>
-        <a href=""><i class="fa-brands fa-2x fa-whatsapp"></i></a>
+        <a class="social-media-link" href=""><i class="fa-brands fa-2x fa-instagram"></i></a>
+        <a class="social-media-link" href=""><i class="fa-brands fa-2x fa-facebook"></i></a>
+        <a class="social-media-link" href=""><i class="fa-brands fa-2x fa-whatsapp"></i></a>
       </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://assets.codepen.io/16327/SplitText3.min.js"></script>
     <script src="./index.js"></script>
   </body>
 </html>
