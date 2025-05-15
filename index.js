@@ -65,7 +65,6 @@ gsap.from(".social-media-link", {
 });
 
 document.querySelector("form").addEventListener("submit", (e) => {
-  e.preventDefault(); //remove with formspree
   setTimeout(() => {
     document.getElementById("name").value = "";
     document.getElementById("email").value = "";

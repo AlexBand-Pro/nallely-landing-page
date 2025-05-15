@@ -9,10 +9,7 @@
     />
 
     <meta property="og:title" content="Nallely Herrera" />
-    <meta
-      property="og:description"
-      content="Poesía y Versos que Respiran"
-    />
+    <meta property="og:description" content="Poesía y Versos que Respiran" />
     <meta
       property="og:image"
       content="https://alexband-pro.github.io/nallely-landing-page/images/quill.jpg"
@@ -27,7 +24,10 @@
 
     <title>Nallely Herrera | Poesía y Versos que Respiran</title>
     <link rel="stylesheet" href="./index.css" />
-    <!-- <link rel="canonical" href="https://yourdomain.com/" /> -->
+    <link
+      rel="canonical"
+      href="https://alexband-pro.github.io/nallely-landing-page/"
+    />
 
     <link rel="icon" type="image/png" href="./images/valentines.png" />
     <link rel="preload" href="./images/quill.jpg" as="image" />
@@ -174,15 +174,22 @@
 
       <section class="contact-section">
         <h2 class="contact-heading">Contáctame</h2>
-        <form>
+        <form action="https://formspree.io/f/xanoadlz" method="POST" id="form">
           <label for="name" class="sr-only">Nombre</label>
-          <input type="text" name="name" id="name" placeholder="Nombre" />
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Nombre"
+            required
+          />
           <label for="email" class="sr-only">Correo electrónico</label>
           <input
             type="email"
             name="email"
             id="email"
             placeholder="Correo electrónico"
+            required
           />
           <label for="message" class="sr-only">Mensaje</label>
           <textarea
@@ -191,6 +198,7 @@
             placeholder="Mensaje"
             cols="40"
             rows="10"
+            required
           ></textarea>
           <button id="form-btn" class="form-btn">Enviar</button>
         </form>
